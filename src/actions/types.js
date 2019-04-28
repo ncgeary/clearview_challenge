@@ -1,0 +1,1 @@
+export const NEW_LOGO = 'NEW_LOGO';
