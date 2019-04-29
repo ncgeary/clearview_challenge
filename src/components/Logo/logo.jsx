@@ -1,18 +1,15 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux';
-import newLogo from '../../actions/newLogo';
+// import {connect} from 'react-redux';
+// import PropTypes from 'prop-types';
+
 
 
  class Logo extends Component {
-    
-  componentWillMount(){
-    this.props.newLogo();
-  }
-  
+
 
 
   render() {
-      const currentLogo = this.props.logo
+    const currentLogo = 'https://s3.amazonaws.com/images.clearviewsocial/CVSLogo.FullColor.RGB+(2).png'
 
     return (
         <img
@@ -24,8 +21,4 @@ import newLogo from '../../actions/newLogo';
   }
 }
 
-const mapStateToProps = state => ({
-  logo: state.newLogo.logo
-})
-
-export default connect(mapStateToProps,{newLogo})(Logo);
+export default Logo;

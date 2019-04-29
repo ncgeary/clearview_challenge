@@ -1,8 +1,8 @@
 import { NEW_LOGO } from './types';
 
-export const newLogo = () => dispatch => {
+export const newLogo = (logoImg) => dispatch => {
     dispatch({
         type: NEW_LOGO,
-        payload: logo
+        payload: logoImg
     })
 };
