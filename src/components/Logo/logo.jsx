@@ -1,24 +1,40 @@
 import React, { Component } from 'react'
-// import {connect} from 'react-redux';
+import {connect} from 'react-redux';
 // import PropTypes from 'prop-types';
 
 
 
  class Logo extends Component {
-
+   coolLogo(){
+     return this.props.mainLogo.map((logoURL)=>{
+       return(
+        //  <div key={logoURL.id}>{logoURL.url}</div>
+         <img
+           key={logoURL.id}
+           src={logoURL.url}
+            alt="issue"/>
+       )
+      
+     })
+   }
 
 
   render() {
-    const currentLogo = 'https://s3.amazonaws.com/images.clearviewsocial/CVSLogo.FullColor.RGB+(2).png'
+    
+    const logotag = this.coolLogo();
 
     return (
-        <img
-            src={currentLogo}
-            alt="issue"/>
-        
-        
+        <div>
+          {logotag}
+        </div>
+     
     )
   }
 }
+function mapStateToProps(state){
+  return{
+    mainLogo: state.mainLogo
+  };
+}
 
-export default Logo;
+export default connect(mapStateToProps)(Logo);
