@@ -1,41 +1,70 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import {bindActionCreators} from 'redux';
 import {newLogo} from '../../actions/newLogo';
 
 
 class DropZone extends Component {
 
-    
+
 
     fileChangedHandler = (event) => {
-        this.setState({ logo:event.target.files[0] });
+        console.log(event.target.files[0])
+        if (window.FileReader) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            if (file && file.type.match('image.*')) {
+                reader.readAsDataURL(file);
+            } else {
+                console.log("nope")
+            }
+            reader.onloadend = function (e) {
+            
+                const base64data = reader.result;
+                console.log(base64data)
+                return base64data
+            }
+        }
     }
 
     fileUploadHandler = (event) =>{
         //where redux will change the state of logo to this address
-        const logo = this.state.logo
-        this.props.newLogo(logo)
+        this.props.newLogo();
+        
     }
 
-
+   
 
     render() {
+        // if (!this.base64data) {
+        //     return(
+        //         <img src={this.base64data} alt="nope" />
+        //     )
+            
+        // }
         return (
-            <form onSubmit={this.fileUploadHandler}>
+            <div>
+                <form onSubmit={this.fileUploadHandler}>
 
-                <input type="file" onChange={this.fileChangedHandler}  />
-                <button onClick={this.fileUploadHandler}>Change Logo</button>
+                    <input type="file" onChange={this.fileChangedHandler} />
 
-            </form>
+                    <button onClick={this.fileUploadHandler}>Change Logo</button>
+
+                </form>
+                
+                
+            </div>
+            
             
         )
     }
 }
 
-DropZone.propTypes = {
-    newLogo: PropTypes.func.isRequired,
+function matchDispatchToProps(dispatch){
+    return bindActionCreators({
+        newLogo:newLogo,dispatch
+    })
 }
 
 
-export default connect(null, { newLogo })(DropZone);
+export default connect(matchDispatchToProps)(DropZone);
