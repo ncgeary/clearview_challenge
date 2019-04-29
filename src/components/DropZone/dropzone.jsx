@@ -36,12 +36,7 @@ class DropZone extends Component {
    
 
     render() {
-        // if (!this.base64data) {
-        //     return(
-        //         <img src={this.base64data} alt="nope" />
-        //     )
-            
-        // }
+        
         return (
             <div>
                 <form onSubmit={this.fileUploadHandler}>
@@ -51,11 +46,9 @@ class DropZone extends Component {
                     <button onClick={this.fileUploadHandler}>Change Logo</button>
 
                 </form>
-                
-                
+   
             </div>
-            
-            
+
         )
     }
 }
