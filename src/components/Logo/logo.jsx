@@ -6,12 +6,13 @@ import {connect} from 'react-redux';
 
  class Logo extends Component {
    coolLogo(){
-     return this.props.mainLogo.map((logoURL)=>{
+     return Object.keys(this.props.newLogo).map(()=>{
        return(
         //  <div key={logoURL.id}>{logoURL.url}</div>
+         console.log(this.props.newLogo),
          <img
-           key={logoURL.id}
-           src={logoURL.url}
+           key={this.props.newLogo.id}
+           src={this.props.newLogo.url}
             alt="issue"/>
        )
       
@@ -33,7 +34,7 @@ import {connect} from 'react-redux';
 }
 function mapStateToProps(state){
   return{
-    mainLogo: state.mainLogo
+    newLogo: state.newLogo
   };
 }
 
