@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
+import './logo.css';
 // import PropTypes from 'prop-types';
 
 
@@ -19,7 +20,7 @@ import {connect} from 'react-redux';
     const logotag = this.coolLogo();
 
     return (
-        <div>
+        <div className="logohead">
           {logotag}
         </div>
      

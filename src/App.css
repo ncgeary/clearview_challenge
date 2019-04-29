@@ -1,0 +1,37 @@
+.App {
+    display: grid;
+
+    grid-template-areas:
+        "logo header"
+        "nav content"
+        "footer footer";
+
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+.logo{
+    grid-area: logo;
+}
+.header {
+    grid-area: header;
+}
+
+.nav {
+    grid-area: nav;
+    margin-left: 0.5rem;
+}
+
+.main {
+    grid-area: content;
+}
+
+.aside {
+    grid-area: side;
+    margin-right: 0.5rem;
+}
+
+footer {
+    grid-area: footer;
+}
