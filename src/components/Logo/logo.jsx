@@ -6,19 +6,13 @@ import {connect} from 'react-redux';
 
  class Logo extends Component {
    coolLogo(){
-     return Object.keys(this.props.newLogo).map(()=>{
        return(
-        //  <div key={logoURL.id}>{logoURL.url}</div>
-         console.log(this.props.newLogo),
          <img
            key={this.props.newLogo.id}
            src={this.props.newLogo.url}
             alt="issue"/>
        )
-      
-     })
-   }
-
+     }
 
   render() {
     
