@@ -6,7 +6,7 @@ import {newLogo} from '../../actions/newLogo';
 
 class DropZone extends Component {
 
-
+    
     fileChangedHandler = (event) => {
         // console.log(event.target.files[0])
         if (window.FileReader) {
@@ -18,25 +18,28 @@ class DropZone extends Component {
             } else {
                 console.log("nope")
             }
-            reader.onloadend = function () {
-                const base64data = reader.result;
-                console.log(base64data)
+            reader.onloadend = (base64data)=> {
+                return(
+                     base64data = reader.result
+                );
 
-            }
+            };
         }
         
     }
 
     fileUploadHandler = () =>{
         //where redux will change the state of logo to this address
-        // this.props.newLogo();
-        console.log("thign")
+        this.props.newLogo();
+        
     }
 
    
 
     render() {
+
         
+        // const base64data = this.fileChangedHandler();
         
         return (
             <div>
@@ -45,6 +48,8 @@ class DropZone extends Component {
                     <input type="file" onChange={this.fileChangedHandler} />
 
                     <button onClick={this.fileUploadHandler.bind(this)}>Change Logo</button>
+
+                    {/* <div>{base64data}</div> */}
 
                 </form>
    
