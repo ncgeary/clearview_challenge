@@ -5,9 +5,23 @@ nav{
 
 ul {
     list-style-type: none;
+    font-size: 20px;
 }
 
 li a {
     text-align: center;
     color: #FFFFFF;
+    text-decoration: none;
+}
+
+li a:hover{
+    text-align: center;
+    color: #2AB9FB;
+}
+
+li i{
+    padding-right: 10px
+}
+.extrapadding{
+    margin-left: 30px
 }

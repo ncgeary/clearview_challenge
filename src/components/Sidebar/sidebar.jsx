@@ -7,15 +7,16 @@ class SideBar extends Component {
             <nav>
                 <ul>
                     
-                    <li><a href="/">Content</a></li>
-                    <li><a href="/">Results</a></li>
-                    <li><a href="/">Help</a></li>
+                    <li><a href="/"><i className="far fa-newspaper"></i>Content</a></li>
+                    <li><a href="/"><i className="far fa-calendar-check"></i>Calendar</a></li>
+                    <li><a href="/"><i className="fas fa-poll"></i>Results</a></li>
+                    <li><a href="/"><i className="far fa-question-circle"></i>Help</a></li>
                     <hr />
-                    <li><a href="/">Admin</a></li>
-                    <li><a href="/">Queues</a></li>
-                    <li><a href="/">Engagement</a></li>
-                    <li><a href="/">Settings</a></li>
-                    <li><a href="/">Users</a></li>
+                    <li><a href="/" className="extrapadding">Admin</a></li>
+                    <li><a href="/" className="extrapadding">Queues</a></li>
+                    <li><a href="/"><i className="far fa-thumbs-up"></i>Engagement</a></li>
+                    <li><a href="/"><i className="fas fa-cog"></i>Settings</a></li>
+                    <li><a href="/" className="extrapadding">Users</a></li>
                 </ul>
             </nav>
 

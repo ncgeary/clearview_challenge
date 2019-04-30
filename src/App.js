@@ -7,17 +7,16 @@ import store from './store'
 import DropZone from './components/DropZone/dropzone';
 import Header from './components/Header/header';
 import SideBar from './components/Sidebar/sidebar';
-// import Logo from './components/Logo/logo';
-import HeadLogo from './components/HeadLogo/headlogo';
+import Logo from './components/Logo/logo';
+
 
 function App() {
   return (
     <Provider store={store}>
       < div className = "App" >
-        <HeadLogo className="logo"/>
+        <Logo className="logo"/>
         <Header className = "header" />
         <SideBar className="nav" />
-        {/* <Logo className = "main" /> */}
         <DropZone className="main"/>
       </div>
 
