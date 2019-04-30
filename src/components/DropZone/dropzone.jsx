@@ -24,10 +24,22 @@ class DropZone extends Component {
         this.props.newLogo(this.state.url)
     }
 
+    previewLogo() {
+        return (
+            <img
+                src={this.state.url}
+                alt="" />
+        )
+    }
+
     render() {
         
+        const previewLogo = this.previewLogo();
+
         return (
             <div>
+                <h3>Preview:{previewLogo}</h3>
+                
                 <input 
                     type="file" 
                     onChange={event=> this.setState({imgfile: event.target.files[0]})} />

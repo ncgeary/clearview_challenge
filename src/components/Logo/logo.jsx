@@ -20,8 +20,8 @@ import './logo.css';
     const logotag = this.coolLogo();
 
     return (
-        <div className="logohead">
-          {logotag}
+        <div>
+          <h3>Preview:{logotag}</h3>
         </div>
      
     )

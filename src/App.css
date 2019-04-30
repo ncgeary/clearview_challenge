@@ -4,6 +4,7 @@
     grid-template-areas:
         "logo header"
         "nav content"
+        "nav content"
         "footer footer";
 
     grid-template-columns: 200px 1fr;
@@ -21,10 +22,11 @@
 .nav {
     grid-area: nav;
     margin-left: 0.5rem;
+    grid-row: span 2;
 }
 
 .main {
-    grid-area: content;
+    grid-area: content;   
 }
 
 .aside {
