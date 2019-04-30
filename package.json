@@ -2,7 +2,7 @@
   "name": "clearview_challenge",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ncgeary.github.io/clearview_challenge",
+  "homepage": "https://ncg-react-image-uploader.herokuapp.com/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
