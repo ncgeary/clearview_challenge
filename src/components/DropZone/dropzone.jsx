@@ -3,13 +3,16 @@ import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {newLogo} from '../../actions/newLogo';
 
-class DropZone extends Component {
+import './dropzone.css'
 
+class DropZone extends Component {
+    //setting inital state for this component
     state={
         imgfile:[],
         url:[]
     }
 
+    //creating the new logo
     newLogo(){
         var file = this.state.imgfile;
         var reader = new FileReader();
@@ -17,16 +20,19 @@ class DropZone extends Component {
         reader.onload = (e) => {
             return (
                 this.setState({
+                    //image src in base64 string
                     url: reader.result
                 })
             )
         };
+        // sending the current state (after the image has been uploaded) to the action
         this.props.newLogo(this.state.url)
     }
 
     previewLogo() {
         return (
             <img
+                className="previewLogo"
                 src={this.state.url}
                 alt="" />
         )
@@ -37,19 +43,22 @@ class DropZone extends Component {
         const previewLogo = this.previewLogo();
 
         return (
-            <div>
-                <h3>Preview:{previewLogo}</h3>
-                
+            <div className="dropzoner">
+                <h2>Upload New Logo</h2>
+
+                {previewLogo}
+
                 <input 
                     type="file" 
                     onChange={event=> this.setState({imgfile: event.target.files[0]})} />
 
-                <button onClick={() => this.newLogo()}>Change Logo</button>
+                <button onClick={() => this.newLogo()}>Upload</button>
             </div>
         )
     }
 }
 
+//bringing in action
 function matchDispatchToProps(dispatch){
     return bindActionCreators({newLogo},dispatch);
 }

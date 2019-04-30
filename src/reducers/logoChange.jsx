@@ -6,7 +6,7 @@ const initialState = {
 export default function (state = initialState, action){
     switch(action.type){
         case "NEW_LOGO":
-            console.log(action.payload)
+            // console.log(action.payload)
             return {
                 ...state,
                 url: action.payload
