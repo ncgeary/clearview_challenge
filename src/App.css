@@ -4,11 +4,11 @@
     grid-template-areas:
         "logo header"
         "nav content"
-        "nav content"
+        "nav  content"
         "footer footer";
 
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 200px 1fr ;
+    grid-template-rows: auto 1fr 1fr 1fr;
     height: 100vh;
 }
 
@@ -17,6 +17,7 @@
 }
 .header {
     grid-area: header;
+    grid-column: span 2;
 }
 
 .nav {
@@ -29,10 +30,6 @@
     grid-area: content;   
 }
 
-.aside {
-    grid-area: side;
-    margin-right: 0.5rem;
-}
 
 footer {
     grid-area: footer;

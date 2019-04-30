@@ -29,24 +29,11 @@ class DropZone extends Component {
         this.props.newLogo(this.state.url)
     }
 
-    previewLogo() {
-        return (
-            <img
-                className="previewLogo"
-                src={this.state.url}
-                alt="" />
-        )
-    }
-
     render() {
         
-        const previewLogo = this.previewLogo();
-
         return (
             <div className="dropzoner">
                 <h2>Upload New Logo</h2>
-
-                {previewLogo}
 
                 <input 
                     type="file" 

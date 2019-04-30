@@ -8,6 +8,7 @@ import DropZone from './components/DropZone/dropzone';
 import Header from './components/Header/header';
 import SideBar from './components/Sidebar/sidebar';
 import Logo from './components/Logo/logo';
+import Preview from './components/Preview/preview';
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
         <Header className = "header" />
         <SideBar className="nav" />
         <DropZone className="main"/>
+        <Preview className = "main" />
+
       </div>
 
     </Provider>

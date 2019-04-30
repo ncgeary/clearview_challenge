@@ -1,6 +1,6 @@
 const initialState = {
     id: 0,
-    url: ['https://s3.amazonaws.com/images.clearviewsocial/CVSLogo.FullColor.RGB+(2).png']
+    url: []
 }
 
 export default function (state = initialState, action){
