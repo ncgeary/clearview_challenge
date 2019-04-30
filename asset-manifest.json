@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/clearview_challenge/static/css/main.fbf3b601.chunk.css",
+    "main.js": "/clearview_challenge/static/js/main.3f0f1778.chunk.js",
+    "main.js.map": "/clearview_challenge/static/js/main.3f0f1778.chunk.js.map",
+    "runtime~main.js": "/clearview_challenge/static/js/runtime~main.02133d42.js",
+    "runtime~main.js.map": "/clearview_challenge/static/js/runtime~main.02133d42.js.map",
+    "static/js/2.ef57340a.chunk.js": "/clearview_challenge/static/js/2.ef57340a.chunk.js",
+    "static/js/2.ef57340a.chunk.js.map": "/clearview_challenge/static/js/2.ef57340a.chunk.js.map",
+    "index.html": "/clearview_challenge/index.html",
+    "precache-manifest.123e65325df7857c8490270a8d56f82b.js": "/clearview_challenge/precache-manifest.123e65325df7857c8490270a8d56f82b.js",
+    "service-worker.js": "/clearview_challenge/service-worker.js",
+    "static/css/main.fbf3b601.chunk.css.map": "/clearview_challenge/static/css/main.fbf3b601.chunk.css.map"
+  }
+}
