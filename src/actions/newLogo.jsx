@@ -1,9 +1,9 @@
 import { NEW_LOGO } from './types';
 
-export const newLogo = (logoURL) =>{
-    // console.log("gottem")
+export const newLogo = (url) =>{
+    console.log("gottem")
     return{
         type: NEW_LOGO,
-        payload: logoURL
+        payload: url
     }
 }
