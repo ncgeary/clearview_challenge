@@ -16,17 +16,22 @@ class DropZone extends Component {
     newLogo(){
         var file = this.state.imgfile;
         var reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = (e) => {
-            return (
-                this.setState({
-                    //image src in base64 string
-                    url: reader.result
-                })
-            )
-        };
-        // sending the current state (after the image has been uploaded) to the action
-        this.props.newLogo(this.state.url)
+        
+        if (this.state.imgfile.length === 0){
+            alert("No image to upload");
+        }else{
+            reader.readAsDataURL(file);
+            reader.onload = (e) => {
+                return (
+                    this.setState({
+                        //image src in base64 string
+                        url: reader.result
+                    })
+                )
+            };
+            // sending the current state (after the image has been uploaded) to the action
+            this.props.newLogo(this.state.url)
+        }           
     }
 
     render() {

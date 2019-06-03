@@ -1,1 +1,1 @@
-.
+This project is an exercise to create a logo previewer using react and redux.

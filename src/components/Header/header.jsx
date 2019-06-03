@@ -8,7 +8,7 @@ class Header extends Component {
         return (
             <div>
                 <div className="head">
-                    <h1>Clearview Social Inc</h1>
+                    <h1>Logo Previewer</h1>
                     <h2>Branding & Customization</h2>
 
 
